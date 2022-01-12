@@ -214,15 +214,15 @@ Answer the following question in your copy of the `README.md` file.
 
 Which of the following are integers:
 
-   * "hello" | ADD ANSWER HERE
-   * 17.5 | ADD ANSWER HERE
-   * 60009
-   * 22333
-   * -33.5f
-   * 'c'
-   * 0x5723
-   * 0b10101010
-   * -42
+   * "hello" | no
+   * 17.5 | no
+   * 60009 | yes
+   * 22333 | yes
+   * -33.5f | no
+   * 'c' | no
+   * 0x5723 | yes
+   * 0b10101010 | yes
+   * -42 | yes
 
 
 ## Negative Integers
@@ -262,25 +262,25 @@ Answer the following question in your copy of the `README.md` file.
 
 * How many positive values can be represented in a 6-bit signed integer?
 
-ADD ANSWER HERE
+2^5 - 1 positive values
 
 * How many negative values can be represented in a 12-bit signed integer?
 
-ADD ANSWER HERE
+2^11 negative values
 
 
 * How many values can be represented in a 9-bit signed integer?
-
+4^8 values (2^8 -1 + 2^8 +1)
 ADD ANSWER HERE
 
 * Each of the following numbers are 8-bit signed integers. For each, convert 
   them to binary then specify if it is positive or negative (you do not need to
   calculate the decimal value).
 
-  * `0xAB` - BINARY HERE - IS POSITIVE HERE?
-  * `0xFD` 
-  * `0xF1`
-  * `0xBD`
+  * `0xAB` - ob10101011 - neg
+  * `0xFD` - ob11111101 - neg
+  * `0xF1` - ob11110001 - neg
+  * `0xBD` - 10111101 - neg
   
 ## Negative Integers in C#
 
@@ -380,12 +380,12 @@ Answer the following question in your copy of the `README.md` file.
 For each of the following, specify if the resulting calculation will result in
 an Overflow, Underflow, or No Error.
 
-* Using 4-bit signed integers: 4 + 4 - ANSWER HERE
-* Using 4-bit signed integers: 0 - 4 - ANSWER HERE
-* Using 4-bit signed integers: -7 - 2
-* Using 6-bit signed integers: 30 + 2
-* Using 6-bit signed integers: 0 - 32
-* Using 6-bit signed integers: 14 - 16
+* Using 4-bit signed integers: 4 + 4 : 8 --> ob01000 - overflow
+* Using 4-bit signed integers: 0 - 4 : -4 --> ob1100 - no error
+* Using 4-bit signed integers: -7 - 2 : -9 -->  underflow
+* Using 6-bit signed integers: 30 + 2 : 32 --> ob0100000 - overflow
+* Using 6-bit signed integers: 0 - 32 : -32 --> ob1011110 - underflow
+* Using 6-bit signed integers: 14 - 16 : -2 --> ob111101 - no error
 
 ## Submit your Work
 
