@@ -224,6 +224,7 @@ Which of the following are integers:
    * 0b10101010 | yes
    * -42 | yes
 
+FEEDBACK: Great job!
 
 ## Negative Integers
 
@@ -282,6 +283,8 @@ ADD ANSWER HERE
   * `0xF1` - ob11110001 - neg
   * `0xBD` - 10111101 - neg
   
+  FEEDBACK: Great job!
+
 ## Negative Integers in C#
 
 The `int` data type in C# is a 32-bit signed integer which means it can store
@@ -384,7 +387,10 @@ an Overflow, Underflow, or No Error.
 * Using 4-bit signed integers: 0 - 4 : -4 --> ob1100 - no error
 * Using 4-bit signed integers: -7 - 2 : -9 -->  underflow
 * Using 6-bit signed integers: 30 + 2 : 32 --> ob0100000 - overflow
-* Using 6-bit signed integers: 0 - 32 : -32 --> ob1011110 - underflow
+* Using 6-bit signed integers: 0 - 32 : -32 --> ob1011110 - underflow (This produces 2 overflow errors)
+
+Because 32 cannot be represented as a 6-bit integer, it overflows to -32. This results in the expression (0 - (-32)) which *should* be 32. However, because this overflows again, we get -32. Which interestingly enough is the correct result.
+
 * Using 6-bit signed integers: 14 - 16 : -2 --> ob111101 - no error
 
 ## Submit your Work
